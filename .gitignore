@@ -2,3 +2,4 @@ tmp/app.db
 package-lock.json
 .editorconfig
 node_modules
+.vscode
