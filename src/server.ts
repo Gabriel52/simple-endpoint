@@ -1,11 +1,16 @@
 import fastify from 'fastify'
-import { knex } from './database'
+import cookie from '@fastify/cookie'
+import { transactionsRoutes } from './routes/transactions'
 
 const app = fastify()
 
-app.get('/', async (request, response) => {
-  const table = await knex('sqlite_schema').select('*')
-  return table
+app.register(cookie)
+
+app.addHook('preHandler', async (request, response) => {
+  console.log(`[${request.method}] ${request.url}`)
+})
+app.register(transactionsRoutes, {
+  prefix: 'transactions',
 })
 
 const PORT = 3333

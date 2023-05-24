@@ -3,16 +3,22 @@
     "@rocketseat/eslint-config": "^1.2.0",
     "@types/node": "^20.1.4",
     "eslint": "^8.40.0",
+    "ts-node": "^10.9.1",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "knex": "node --loader tsx ./node_modules/.bin/knex",
+    "migrate:create": "npm run knex -- migrate:make --migrations-directory ./src/db/migrations -x ts",
     "lint": "eslint src --ext .ts --fix"
   },
   "dependencies": {
+    "@fastify/cookie": "^8.3.0",
+    "dotenv": "^16.0.3",
     "fastify": "^4.17.0",
     "knex": "^2.4.2",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "zod": "^3.21.4"
   }
 }

@@ -1,5 +1,6 @@
-tmp/app.db
+db/app.db
 package-lock.json
 .editorconfig
 node_modules
 .vscode
+.env
