@@ -1,7 +1,18 @@
-db/app.db
-package-lock.json
-.editorconfig
+# Dependencies
 node_modules
+package-lock.json
+
+# Database
+db/*.db
+
+
+# Settings
+.editorconfig
 .vscode
+
+# Environment 
 .env
 .env.test
+
+# Build
+build
