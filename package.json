@@ -1,12 +1,12 @@
 {
-    "scripts": {
-      "dev": "tsx watch src/server.ts",
-      "knex": "node --loader tsx ./node_modules/.bin/knex",
-      "migrate:create": "npm run knex -- migrate:make --migrations-directory ./src/db/migrations -x ts",
-      "lint": "eslint src --ext .ts --fix",
-      "test": "vitest",
-      "build": "tsup src --out-dir build"
-    },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "knex": "node --loader tsx ./node_modules/.bin/knex",
+    "migrate:create": "npm run knex -- migrate:make --migrations-directory ./src/db/migrations -x ts",
+    "lint": "eslint src --ext .ts --fix",
+    "test": "vitest",
+    "build": "tsup src --out-dir build"
+  },
   "engines": {
     "node": ">=18"
   },
@@ -15,12 +15,12 @@
     "@types/node": "20.1.4",
     "@types/supertest": "2.0.12",
     "eslint": "8.40.0",
-    "tsx": "3.12.7",
     "supertest": "6.3.3",
     "typescript": "5.0.4"
-},
-"dependencies": {
+  },
+  "dependencies": {
     "tsup": "6.7.0",
+    "tsx": "3.12.7",
     "ts-node": "10.9.1",
     "@fastify/cookie": "8.3.0",
     "dotenv": "16.0.3",
